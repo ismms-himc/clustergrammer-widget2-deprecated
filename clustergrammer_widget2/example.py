@@ -26,3 +26,5 @@ class ExampleWidget(DOMWidget):
     _view_module_version = Unicode(EXTENSION_SPEC_VERSION).tag(sync=True)
 
     value = Unicode('Hello World')
+
+    network = Unicode('').tag(sync=True)
