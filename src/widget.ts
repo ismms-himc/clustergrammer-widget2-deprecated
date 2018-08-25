@@ -9,11 +9,11 @@ import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
-// import cgm from 'clustergrammer-gl';
+import cgm from 'clustergrammer-gl';
 
 
-
-// cgm()
+console.log('working on getting widget to work')
+console.log(cgm);
 
 export
 class ExampleModel extends DOMWidgetModel {
