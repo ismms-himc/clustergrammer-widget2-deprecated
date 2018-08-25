@@ -9,11 +9,11 @@ import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
-import cgm from 'clustergrammer-gl';
+// import cgm from 'clustergrammer-gl';
 
 
 
-cgm()
+// cgm()
 
 export
 class ExampleModel extends DOMWidgetModel {
@@ -51,6 +51,6 @@ class ExampleView extends DOMWidgetView {
   }
 
   value_changed() {
-    this.el.textContent = this.model.get('value')  + '1';
+    this.el.textContent = this.model.get('value')  + 'Something!!';
   }
 }
