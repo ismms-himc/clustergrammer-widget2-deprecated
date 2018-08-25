@@ -10,6 +10,7 @@ const externals = ['@jupyter-widgets/base', 'three', 'jupyter-threejs'];
 module.exports = [
   {
     // Notebook extension
+    mode:'development',
     entry: './src/index.ts',
     output: {
       filename: 'index.js',
