@@ -9,6 +9,8 @@ import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
+import cgm_fun2 from 'clustergrammer-gl';
+
 
 export
 class ExampleModel extends DOMWidgetModel {
