@@ -40,7 +40,6 @@ class ExampleModel extends DOMWidgetModel {
   static view_name = 'ExampleView';  // Set to null if no view
   static view_module = 'clustergrammer_widget2';   // Set to null if no view
   static view_module_version = EXTENSION_SPEC_VERSION;
-  statis network = '';
 }
 
 
@@ -49,6 +48,7 @@ class ExampleView extends DOMWidgetView {
   render() {
     this.value_changed();
     this.model.on('change:value', this.value_changed, this);
+    console.log(this.model.get('network'));
   }
 
   value_changed() {
