@@ -69,7 +69,7 @@ class ExampleView extends DOMWidgetView {
     // the cid appears to be the container id, which gives a unique view number
     console.log('container_name', container_name)
 
-    this.el.textContent = 'rendering visualization';
+    // this.el.textContent = 'rendering visualization';
 
     // widget-subarea appears to be limited to a width of ~960px in nbviewer
     d3.select(this.el)
@@ -79,9 +79,56 @@ class ExampleView extends DOMWidgetView {
         .style('width', '975px')
         .style('height', '975px');
 
+    var container_id = '#'+container_name;
+
+    var inst_container = document.getElementById(container_name)
+    // var inst_container = d3.select(this.el).select('div'); // [0]
+
+    console.log(container_name, inst_container, container_id);
+
+    //debugger;
+
   }
 
   value_changed() {
     // this.el.textContent = this.model.get('network')  + ' changing value';
+
+    console.log('changed!!!!!!!!!!')
+
+    console.log('\n**********************************************');
+    console.log('changed');
+    console.log('**********************************************');
+
+    var inst_network_string = this.model.get('network');
+
+    var inst_network = JSON.parse(inst_network_string);
+
+    console.log(inst_network)
+
+    var container_name = this.cid;
+
+    // the cid appears to be the container id, which gives a unique view number
+    console.log('container_name', container_name)
+
+    // this.el.textContent = 'rendering visualization';
+
+    // widget-subarea appears to be limited to a width of ~960px in nbviewer
+    d3.select(this.el)
+        .append('div')
+        .classed('clustergrammer_glidget', true)
+        .attr('id', container_name)
+        .style('width', '975px')
+        .style('height', '975px');
+
+    var container_id = '#'+container_name;
+
+    var inst_container = document.getElementById(container_name)
+    // var inst_container = d3.select(this.el).select('div'); // [0]
+
+    console.log(container_name, inst_container, container_id);
+
+    //debugger;
+
+
   }
 }
