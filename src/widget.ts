@@ -11,9 +11,11 @@ import {
 
 import cgm from 'clustergrammer-gl';
 
+import * as d3 from 'd3';
 
 console.log('working on passing data to value')
 console.log(cgm);
+console.log(d3)
 
 export
 class ExampleModel extends DOMWidgetModel {
@@ -62,7 +64,20 @@ class ExampleView extends DOMWidgetView {
 
     console.log(inst_network)
 
+    var container_name = this.cid;
+
+    // the cid appears to be the container id, which gives a unique view number
+    console.log('container_name', container_name)
+
     this.el.textContent = 'rendering visualization';
+
+    // widget-subarea appears to be limited to a width of ~960px in nbviewer
+    d3.select(this.el)
+        .append('div')
+        .classed('clustergrammer_glidget', true)
+        .attr('id', container_name)
+        .style('width', '975px')
+        .style('height', '975px');
 
   }
 

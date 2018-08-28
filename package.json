@@ -42,11 +42,13 @@
   },
   "dependencies": {
     "@jupyter-widgets/base": "^1.1.10",
-    "clustergrammer-gl": "0.4.4"
+    "clustergrammer-gl": "0.4.4",
+    "d3": "^3.5.17"
   },
   "devDependencies": {
     "@phosphor/application": "^1.5.0",
     "@phosphor/widgets": "^1.5.0",
+    "@types/d3": "^5.0.0",
     "@types/expect.js": "^0.3.29",
     "@types/mocha": "^5.2.0",
     "@types/node": "^10.0.9",
