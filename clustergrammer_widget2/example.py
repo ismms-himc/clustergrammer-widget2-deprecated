@@ -27,6 +27,4 @@ class ExampleWidget(DOMWidget):
 
     value = Unicode('Hello World')
 
-    print('HERE')
-
     network = Unicode('').tag(sync=True)

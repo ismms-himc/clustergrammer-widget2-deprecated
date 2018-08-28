@@ -49,10 +49,12 @@ class ExampleView extends DOMWidgetView {
   render() {
     this.value_changed();
     this.model.on('change:value', this.value_changed, this);
-    console.log('something', this.model.get('value'));
+    console.log('\n**********************************************');
+    console.log('rendering: ', this.model.get('network'));
+    console.log('**********************************************');
   }
 
   value_changed() {
-    this.el.textContent = this.model.get('value')  + 'Something!!';
+    this.el.textContent = this.model.get('network')  + ' changing value';
   }
 }
