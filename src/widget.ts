@@ -51,6 +51,7 @@ class ExampleView extends DOMWidgetView {
     this.model.on('change:value', this.value_changed, this);
     console.log('\n**********************************************');
     console.log('rendering: ', this.model.get('network'));
+    console.log(cgm);
     console.log('**********************************************');
   }
 
