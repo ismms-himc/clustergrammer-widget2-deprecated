@@ -12,7 +12,7 @@ import {
 import cgm from 'clustergrammer-gl';
 
 
-console.log('working on getting widget to work')
+console.log('working on passing data to value')
 console.log(cgm);
 
 export
@@ -25,7 +25,8 @@ class ExampleModel extends DOMWidgetModel {
       _view_name: ExampleModel.view_name,
       _view_module: ExampleModel.view_module,
       _view_module_version: ExampleModel.view_module_version,
-      value : 'Hello World'
+      value : 'default-string',
+      network: ''
     };
   }
 
@@ -48,7 +49,7 @@ class ExampleView extends DOMWidgetView {
   render() {
     this.value_changed();
     this.model.on('change:value', this.value_changed, this);
-    console.log(this.model.get('network'));
+    console.log('something', this.model.get('value'));
   }
 
   value_changed() {
