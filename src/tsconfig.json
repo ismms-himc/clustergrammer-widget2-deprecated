@@ -12,5 +12,6 @@
     "skipLibCheck": true,
     "types": [],
     "esModuleInterop":true,
+    "noImplicitAny":false
   }
 }

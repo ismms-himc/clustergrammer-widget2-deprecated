@@ -9,12 +9,12 @@ import {
   EXTENSION_SPEC_VERSION
 } from './version';
 
-import cgm from 'clustergrammer-gl';
+import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
 console.log('working on passing data to value')
-console.log(cgm);
+console.log(cgm_fun);
 console.log(d3)
 
 export
@@ -46,6 +46,17 @@ class ExampleModel extends DOMWidgetModel {
 }
 
 
+function make_viz(args){
+  var inst_container = document.getElementById(args.container_name)
+  console.log('inst_container_2', inst_container)
+  args.container = inst_container;
+  var cgm = cgm_fun(args)
+  console.log(cgm)
+}
+
+console.log(make_viz)
+
+
 export
 class ExampleView extends DOMWidgetView {
   render() {
@@ -71,8 +82,10 @@ class ExampleView extends DOMWidgetView {
 
     // this.el.textContent = 'rendering visualization';
 
+
+
     // widget-subarea appears to be limited to a width of ~960px in nbviewer
-    d3.select(this.el)
+    var inst_container = d3.select(this.el)
         .append('div')
         .classed('clustergrammer_glidget', true)
         .attr('id', container_name)
@@ -81,53 +94,70 @@ class ExampleView extends DOMWidgetView {
 
     var container_id = '#'+container_name;
 
-    var inst_container = document.getElementById(container_name)
+    // var inst_container = document.getElementById(container_name)
     // var inst_container = d3.select(this.el).select('div'); // [0]
 
     console.log(container_name, inst_container, container_id);
 
-    //debugger;
+    // define arguments object
+    var args = {
+        // root: container_id,
+        'container_name': container_name,
+        // 'container': inst_container,
+        'network': inst_network,
+        // 'about':about_string,
+        // 'row_tip_callback':hzome.gene_info,
+        // 'matrix_update_callback':matrix_update_callback,
+        // 'cat_update_callback': cat_update_callback,
+        // 'sidebar_width':135,
+    };
+
+    console.log(args);
+
+    setTimeout(make_viz, 10, args);
 
   }
 
   value_changed() {
-    // this.el.textContent = this.model.get('network')  + ' changing value';
+    // // this.el.textContent = this.model.get('network')  + ' changing value';
 
-    console.log('changed!!!!!!!!!!')
+    // console.log('changed!!!!!!!!!!')
 
-    console.log('\n**********************************************');
-    console.log('changed');
-    console.log('**********************************************');
+    // console.log('\n**********************************************');
+    // console.log('changed');
+    // console.log('**********************************************');
 
-    var inst_network_string = this.model.get('network');
+    // var inst_network_string = this.model.get('network');
 
-    var inst_network = JSON.parse(inst_network_string);
+    // var inst_network = JSON.parse(inst_network_string);
 
-    console.log(inst_network)
+    // console.log(inst_network)
 
-    var container_name = this.cid;
+    // var container_name = this.cid;
 
-    // the cid appears to be the container id, which gives a unique view number
-    console.log('container_name', container_name)
+    // // the cid appears to be the container id, which gives a unique view number
+    // console.log('container_name', container_name)
 
-    // this.el.textContent = 'rendering visualization';
+    // // this.el.textContent = 'rendering visualization';
 
-    // widget-subarea appears to be limited to a width of ~960px in nbviewer
-    d3.select(this.el)
-        .append('div')
-        .classed('clustergrammer_glidget', true)
-        .attr('id', container_name)
-        .style('width', '975px')
-        .style('height', '975px');
+    // // widget-subarea appears to be limited to a width of ~960px in nbviewer
+    // d3.select(this.el)
+    //     .append('div')
+    //     .classed('clustergrammer_glidget', true)
+    //     .attr('id', container_name)
+    //     .style('width', '975px')
+    //     .style('height', '975px');
 
-    var container_id = '#'+container_name;
+    // var container_id = '#'+container_name;
 
-    var inst_container = document.getElementById(container_name)
-    // var inst_container = d3.select(this.el).select('div'); // [0]
+    // var inst_container = document.getElementById(container_name)
+    // // var inst_container = d3.select(this.el).select('div'); // [0]
 
-    console.log(container_name, inst_container, container_id);
+    // console.log(container_name, inst_container, container_id);
 
-    //debugger;
+    // //debugger;
+
+    console.log('CHANGING')
 
 
   }
