@@ -51,7 +51,8 @@ function make_viz(args){
   console.log('inst_container_2', inst_container)
   args.container = inst_container;
   var cgm = cgm_fun(args)
-  console.log(cgm)
+  console.log('making clustergram in make_viz');
+  console.log(cgm);
 }
 
 console.log(make_viz)
