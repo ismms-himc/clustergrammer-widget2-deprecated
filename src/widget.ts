@@ -47,15 +47,26 @@ class ExampleModel extends DOMWidgetModel {
 export
 class ExampleView extends DOMWidgetView {
   render() {
+
     this.value_changed();
-    this.model.on('change:value', this.value_changed, this);
+
+    // this.model.on('change:value', this.value_changed, this);
+
     console.log('\n**********************************************');
-    console.log('rendering: ', this.model.get('network'));
-    console.log(cgm);
+    console.log('rendering');
     console.log('**********************************************');
+
+    var inst_network_string = this.model.get('network');
+
+    var inst_network = JSON.parse(inst_network_string);
+
+    console.log(inst_network)
+
+    this.el.textContent = 'rendering visualization';
+
   }
 
   value_changed() {
-    this.el.textContent = this.model.get('network')  + ' changing value';
+    // this.el.textContent = this.model.get('network')  + ' changing value';
   }
 }
