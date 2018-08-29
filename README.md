@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/ismms-himc/clustergrammer_widget2.svg?branch=master)](https://travis-ci.org/ismms-himc/clustergrammer_widget2)
 [![codecov](https://codecov.io/gh/ismms-himc/clustergrammer_widget2/branch/master/graph/badge.svg)](https://codecov.io/gh/ismms-himc/clustergrammer_widget2)
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ismms-himc/clustergrammer_widget2/master)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ismms-himc/clustergrammer_widget2/master?filepath=examples%2Fintroduction.ipynb)
 
 
 A Custom Jupyter Widget Library
