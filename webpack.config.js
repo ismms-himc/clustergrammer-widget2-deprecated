@@ -6,6 +6,7 @@ const rules = [
 
 // Packages that shouldn't be bundled but loaded at runtime
 const externals = ['@jupyter-widgets/base', 'three', 'jupyter-threejs'];
+var version = require('./package.json').version;
 
 module.exports = [
   {
@@ -47,4 +48,32 @@ module.exports = [
       extensions: [".webpack.js", ".web.js", ".ts", ".js"]
     },
   },
+  {// Embeddable {{ cookiecutter.npm_package_name }} bundle
+     //
+     // This bundle is generally almost identical to the notebook bundle
+     // containing the custom widget views and models.
+     //
+     // The only difference is in the configuration of the webpack public path
+     // for the static assets.
+     //
+     // It will be automatically distributed by unpkg to work with the static
+     // widget embedder.
+     //
+     // The target bundle is always `dist/index.js`, which is the path required
+     // by the custom widget embedder.
+     //
+        entry: './lib/embed.js',
+        output: {
+            filename: 'index.js',
+            // path: path.resolve(__dirname, 'dist'),
+            path: __dirname + 'dist', // path.resolve(__dirname, 'dist'),
+            libraryTarget: 'amd',
+            publicPath: 'https://unpkg.com/clustergrammer_widget2@' + version + '/dist/'
+        },
+        devtool: 'source-map',
+        module: {
+            rules: rules
+        },
+        externals: ['@jupyter-widgets/base']
+    }
 ];

@@ -13,7 +13,7 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.4.1, working on versioning widget')
+console.log('version 0.4.1, made embedding changes')
 console.log(cgm_fun);
 console.log(d3)
 

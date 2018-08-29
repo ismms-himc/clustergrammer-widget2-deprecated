@@ -1,12 +1,16 @@
 {
   "name": "clustergrammer_widget2",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A Custom Jupyter Widget Library",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension",
     "widgets"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "dist/*.js"
   ],
   "homepage": "https://github.com/ismms-himc/clustergrammer_widget2",
   "bugs": {
