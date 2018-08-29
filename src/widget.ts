@@ -13,7 +13,7 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.4.3, changed embed entry ')
+console.log('version 0.4.4, changed embed entry ')
 console.log(cgm_fun);
 console.log(d3)
 
