@@ -62,13 +62,14 @@ module.exports = [
      // The target bundle is always `dist/index.js`, which is the path required
      // by the custom widget embedder.
      //
-        entry: './lib/widget.js',
+        entry: './lib/index.js',
         output: {
             filename: 'index.js',
             // path: path.resolve(__dirname, 'dist'),
             path: __dirname + 'dist', // path.resolve(__dirname, 'dist'),
             libraryTarget: 'amd',
-            publicPath: 'https://unpkg.com/clustergrammer_widget2@' + version + '/dist/'
+            // publicPath: 'https://unpkg.com/clustergrammer_widget2@' + version + '/dist/'
+            publicPath: 'https://unpkg.com/clustergrammer_widget2@' + version + '/lib/'
         },
         devtool: 'source-map',
         module: {
