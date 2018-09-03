@@ -31,7 +31,7 @@ clustergrammer_widget2/clustergrammer/make_viz.py
 clustergrammer_widget2/clustergrammer/normalize_fun.py
 clustergrammer_widget2/clustergrammer/proc_df_labels.py
 clustergrammer_widget2/clustergrammer/run_filter.py
-clustergrammer_widget2/labextension/clustergrammer_widget2-0.4.4.tgz
+clustergrammer_widget2/labextension/clustergrammer_widget2-0.4.5.tgz
 clustergrammer_widget2/nbextension/.DS_Store
 clustergrammer_widget2/nbextension/__init__.py
 clustergrammer_widget2/nbextension/static/extension.js
