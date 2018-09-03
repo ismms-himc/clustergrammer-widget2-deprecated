@@ -13,7 +13,7 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.4.4, changed embed entry ')
+console.log('version 0.4.5, changed embed entry ')
 console.log(cgm_fun);
 console.log(d3)
 
@@ -63,11 +63,10 @@ class ExampleView extends DOMWidgetView {
   render() {
 
     this.value_changed();
-
     // this.model.on('change:value', this.value_changed, this);
 
     console.log('\n**********************************************');
-    console.log('rendering');
+    console.log('rendering!!');
     console.log('**********************************************');
 
     var inst_network_string = this.model.get('network');
@@ -81,10 +80,6 @@ class ExampleView extends DOMWidgetView {
     // the cid appears to be the container id, which gives a unique view number
     console.log('container_name', container_name)
 
-    // this.el.textContent = 'rendering visualization';
-
-
-
     // widget-subarea appears to be limited to a width of ~960px in nbviewer
     var inst_container = d3.select(this.el)
         .append('div')
@@ -95,22 +90,12 @@ class ExampleView extends DOMWidgetView {
 
     var container_id = '#'+container_name;
 
-    // var inst_container = document.getElementById(container_name)
-    // var inst_container = d3.select(this.el).select('div'); // [0]
-
     console.log(container_name, inst_container, container_id);
 
     // define arguments object
     var args = {
-        // root: container_id,
         'container_name': container_name,
-        // 'container': inst_container,
         'network': inst_network,
-        // 'about':about_string,
-        // 'row_tip_callback':hzome.gene_info,
-        // 'matrix_update_callback':matrix_update_callback,
-        // 'cat_update_callback': cat_update_callback,
-        // 'sidebar_width':135,
     };
 
     console.log(args);
@@ -120,46 +105,6 @@ class ExampleView extends DOMWidgetView {
   }
 
   value_changed() {
-    // // this.el.textContent = this.model.get('network')  + ' changing value';
-
-    // console.log('changed!!!!!!!!!!')
-
-    // console.log('\n**********************************************');
-    // console.log('changed');
-    // console.log('**********************************************');
-
-    // var inst_network_string = this.model.get('network');
-
-    // var inst_network = JSON.parse(inst_network_string);
-
-    // console.log(inst_network)
-
-    // var container_name = this.cid;
-
-    // // the cid appears to be the container id, which gives a unique view number
-    // console.log('container_name', container_name)
-
-    // // this.el.textContent = 'rendering visualization';
-
-    // // widget-subarea appears to be limited to a width of ~960px in nbviewer
-    // d3.select(this.el)
-    //     .append('div')
-    //     .classed('clustergrammer_glidget', true)
-    //     .attr('id', container_name)
-    //     .style('width', '975px')
-    //     .style('height', '975px');
-
-    // var container_id = '#'+container_name;
-
-    // var inst_container = document.getElementById(container_name)
-    // // var inst_container = d3.select(this.el).select('div'); // [0]
-
-    // console.log(container_name, inst_container, container_id);
-
-    // //debugger;
-
     console.log('CHANGING')
-
-
   }
 }
