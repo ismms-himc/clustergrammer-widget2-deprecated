@@ -1,7 +1,7 @@
 numpy==1.13.1
 pandas==0.22.0
 scipy==1.1.0
-sklearn==0.19.1
+sklearn==0.19.0
 ipywidgets==7.3.0
 clustergrammer==1.13.5
 clustergrammer_widget2==0.4.5
