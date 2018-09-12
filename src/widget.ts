@@ -13,7 +13,7 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.4.5, changed embed entry ')
+console.log('version 0.4.5, GUI!!! using new clustergrammer-gl')
 console.log(cgm_fun);
 console.log(d3)
 
@@ -85,8 +85,8 @@ class ExampleView extends DOMWidgetView {
         .append('div')
         .classed('clustergrammer_glidget', true)
         .attr('id', container_name)
-        .style('width', '975px')
-        .style('height', '975px');
+        .style('width', '950px')
+        .style('height', '1100px');
 
     var container_id = '#'+container_name;
 
@@ -96,6 +96,8 @@ class ExampleView extends DOMWidgetView {
     var args = {
         'container_name': container_name,
         'network': inst_network,
+        'viz_width' : 950,
+        'viz_height': 950
     };
 
     console.log(args);
