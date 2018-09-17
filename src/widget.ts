@@ -13,9 +13,9 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.4.5, GUI!!! using new clustergrammer-gl')
-console.log(cgm_fun);
-console.log(d3)
+console.log('version 0.4.5, new reorder buttons')
+// console.log(cgm_fun);
+// console.log(d3)
 
 export
 class ExampleModel extends DOMWidgetModel {

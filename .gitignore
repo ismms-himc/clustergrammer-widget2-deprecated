@@ -154,3 +154,6 @@ clustergrammer_widget2/labextension/*.tgz
 
 # Packed lab extensions
 clustergrammer_widget2/labextension
+
+*.sublime-workspace
+*.sublime-project
