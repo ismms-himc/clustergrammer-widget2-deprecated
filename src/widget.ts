@@ -85,19 +85,22 @@ class ExampleView extends DOMWidgetView {
         .append('div')
         .classed('clustergrammer_glidget', true)
         .attr('id', container_name)
-        .style('width', '950px')
-        .style('height', '1100px');
+        .style('width', '900px')
+        .style('height', '1035px')
+        .style('border', '2px solid #eee');
 
     var container_id = '#'+container_name;
 
     console.log(container_name, inst_container, container_id);
 
+    var heatmap_width = 850;
+
     // define arguments object
     var args = {
         'container_name': container_name,
         'network': inst_network,
-        'viz_width' : 950,
-        'viz_height': 950
+        'viz_width' : heatmap_width,
+        'viz_height': heatmap_width
     };
 
     console.log(args);
