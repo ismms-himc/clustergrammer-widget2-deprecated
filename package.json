@@ -1,6 +1,6 @@
 {
   "name": "clustergrammer_widget2",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A Custom Jupyter Widget Library",
   "keywords": [
     "jupyter",
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@jupyter-widgets/base": "^1.1.10",
-    "clustergrammer-gl": "0.6.1",
+    "clustergrammer-gl": "0.6.2",
     "d3": "^3.5.17"
   },
   "devDependencies": {
