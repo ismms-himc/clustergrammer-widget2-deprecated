@@ -93,7 +93,7 @@ class ExampleView extends DOMWidgetView {
 
     console.log(container_name, inst_container, container_id);
 
-    var heatmap_width = 850;
+    var heatmap_width = 900;
 
     // define arguments object
     var args = {
