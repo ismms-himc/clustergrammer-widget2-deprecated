@@ -7,7 +7,7 @@ $ npm publish
 
 # Publish the the python package
 Bundle the python package
-python setup.py sdist bdist_wheel
+$ python setup.py sdist bdist_wheel
 
 $ twine upload --skip-existing dist/*
 
