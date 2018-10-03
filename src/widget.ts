@@ -13,7 +13,7 @@ import cgm_fun from 'clustergrammer-gl';
 
 import * as d3 from 'd3';
 
-console.log('version 0.6.0, new reorder buttons')
+console.log('version 0.6.1, new reorder buttons')
 // console.log(cgm_fun);
 // console.log(d3)
 
