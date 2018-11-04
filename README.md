@@ -1,4 +1,9 @@
 
+# ******************************
+# Deprecation Warning
+This Jupyter widget project has been deprecated, please see the https://github.com/ismms-himc/clustergrammer2 repo for the latest version of this project.
+# ******************************
+
 # clustergrammer_widget2
 
 [![Build Status](https://travis-ci.org/ismms-himc/clustergrammer_widget2.svg?branch=master)](https://travis-ci.org/ismms-himc/clustergrammer_widget2)
